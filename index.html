@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MILLIAN — разработка современных продающих сайтов для бизнеса и экспертов: дизайн, чистый код, адаптация, SEO и запуск под ключ.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="MILLIAN">
+  <meta name="theme-color" content="#050505">
+  <meta name="format-detection" content="telephone=no">
+  <title>Разработка продающих сайтов под ключ — MILLIAN</title>
+  <link rel="canonical" href="https://millian-site.vercel.app/">
+  <link rel="alternate" hreflang="ru" href="https://millian-site.vercel.app/">
+  <link rel="alternate" hreflang="x-default" href="https://millian-site.vercel.app/">
+  <link rel="image_src" href="https://millian-site.vercel.app/assets/millian-link-preview-v2.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="MILLIAN">
+  <meta property="og:title" content="Разработка продающих сайтов под ключ — MILLIAN">
+  <meta property="og:description" content="Современные сайты для бизнеса и экспертов: сильная структура, премиальный дизайн, чистый код, адаптация и SEO.">
+  <meta property="og:url" content="https://millian-site.vercel.app/">
+  <meta property="og:image" content="https://millian-site.vercel.app/assets/millian-link-preview-v2.jpg">
+  <meta property="og:image:secure_url" content="https://millian-site.vercel.app/assets/millian-link-preview-v2.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MILLIAN — сайты для бизнеса, которые продают">
+  <meta property="og:updated_time" content="2026-08-24T13:30:00+03:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Разработка продающих сайтов под ключ — MILLIAN">
+  <meta name="twitter:description" content="Современные сайты для бизнеса и экспертов: дизайн, разработка, адаптация и SEO.">
+  <meta name="twitter:image" content="https://millian-site.vercel.app/assets/millian-link-preview-v2.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"MILLIAN","url":"https://millian-site.vercel.app/","description":"Разработка современных продающих сайтов для бизнеса и экспертов под ключ.","areaServed":"RU","sameAs":["https://t.me/Millian1"],"founder":{"@type":"Person","name":"MILLIAN","sameAs":["https://t.me/Millian1"]},"serviceType":["Разработка лендингов","Разработка многостраничных сайтов","Веб-дизайн","SEO-подготовка сайтов"]}</script>
+  <style>
+    :root{--aqua:#20d9dc;--ink:#050505;--paper:#f8f8f6;--line:rgba(255,255,255,.2);--muted:#808080}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#000;color:#fff;font-family:"Open Sans",Arial,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    img{max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    ::selection{background:var(--aqua);color:#000}
+
+    .loader{position:fixed;inset:0;z-index:1000;background:#000;display:grid;place-items:center;transition:opacity .7s,visibility .7s}
+    .loader.hide{opacity:0;visibility:hidden}
+    .loader-mark{font-size:58px;font-weight:900;letter-spacing:-.12em;color:var(--aqua);animation:pulse 1s infinite alternate}
+    @keyframes pulse{to{transform:scale(.85);opacity:.45}}
+
+    .nav{position:fixed;z-index:100;top:0;left:0;width:100%;height:80px;padding:0 5vw;display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:34px;color:#fff;mix-blend-mode:difference}
+    .nav-logo{width:49px;height:49px;display:grid;place-items:center;color:var(--aqua);font-size:30px;font-weight:900;letter-spacing:-.1em}
+    .nav-line{height:1px;background:rgba(255,255,255,.36)}
+    .nav-links{display:flex;gap:68px;font-weight:500}
+    .nav a{transition:color .25s,transform .25s}
+    .nav a:hover{color:var(--aqua);transform:translateY(-2px)}
+
+    .award{position:fixed;z-index:90;right:0;top:38%;width:53px;height:170px;background:#61c0bb;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    .award b{position:absolute;top:12px;font-size:20px}
+    .award span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;margin-top:35px}
+    .top{position:fixed;right:3vw;bottom:24px;z-index:90;width:46px;height:46px;border-radius:50%;border:1px solid rgba(128,128,128,.3);background:rgba(20,20,20,.75);color:var(--aqua);font-size:22px;cursor:pointer;backdrop-filter:blur(10px);opacity:0;transform:translateY(12px);transition:.3s}
+    .top.show{opacity:1;transform:none}
+
+    section{position:relative}
+    .hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:120px 5vw 80px;text-align:center;background:#000}
+    .hero h1{margin:0;max-width:980px;font-size:clamp(48px,6.2vw,94px);line-height:.94;letter-spacing:-.065em;font-weight:800}
+    .hero h1 span{display:block}
+    .hero h1 em{display:inline-block;font-family:"Playfair Display",Georgia,serif;font-size:1.03em;font-weight:700;padding:.08em .18em .1em .04em;margin:-.08em -.03em -.1em -.04em;background:linear-gradient(90deg,#0fd6d9 0%,#43e5d8 24%,#7cf1d4 46%,#6be7e9 68%,#4db8ff 100%);background-size:300% 300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradientShift 7s ease-in-out infinite}
+    .hero h1 b{font:inherit;font-weight:800}.hero-line{white-space:nowrap}
+    @keyframes gradientShift{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+    .look{position:absolute;bottom:14%;left:50%;transform:translateX(-50%);color:#505050;font-size:10px;letter-spacing:.35em;text-transform:uppercase}
+    .mouse{display:block;width:16px;height:27px;border:1px solid #383838;border-radius:12px;margin:12px auto 0}
+    .mouse:before{content:"";display:block;width:3px;height:7px;border-radius:2px;background:var(--aqua);margin:5px auto;animation:wheel 1.5s infinite}
+    @keyframes wheel{0%{transform:translateY(0);opacity:1}100%{transform:translateY(7px);opacity:0}}
+
+    .story{min-height:100vh;padding:120px 8vw;overflow:hidden;background:#000;display:grid;place-items:center}
+    .story:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:52px 52px}
+    .story-code{position:absolute;inset:5% 2%;font:clamp(12px,1.25vw,18px)/1.7 Consolas,monospace;color:#6e7477;pointer-events:none;overflow:hidden}
+    .story-code span{position:absolute;opacity:.42;white-space:nowrap;min-height:1.7em;text-shadow:0 0 18px rgba(32,217,220,.08)}.story-code span:nth-child(3n+1){color:#6a9b86}.story-code span:nth-child(3n+2){color:#9a6784}.story-code span:nth-child(3n){color:#6d778f}.story-code .typing:after{content:"";display:inline-block;width:1px;height:1em;margin-left:3px;background:var(--aqua);vertical-align:-.12em;animation:caret .55s steps(1) infinite}
+    .story-code span:nth-child(1){left:1%;top:4%}.story-code span:nth-child(2){right:3%;top:9%}.story-code span:nth-child(3){left:16%;top:19%}.story-code span:nth-child(4){right:7%;top:30%}.story-code span:nth-child(5){left:2%;top:40%}.story-code span:nth-child(6){right:25%;top:49%}.story-code span:nth-child(7){left:9%;bottom:31%}.story-code span:nth-child(8){right:1%;bottom:25%}.story-code span:nth-child(9){left:40%;bottom:15%}.story-code span:nth-child(10){left:40%;top:1%}.story-code span:nth-child(11){right:38%;top:61%}.story-code span:nth-child(12){left:1%;bottom:3%}.story-code span:nth-child(13){left:28%;top:10%}.story-code span:nth-child(14){right:16%;top:21%}.story-code span:nth-child(15){left:1%;top:68%}.story-code span:nth-child(16){right:4%;bottom:6%}.story-code span:nth-child(17){left:35%;bottom:1%}.story-code span:nth-child(18){right:34%;top:39%}
+    @keyframes caret{50%{opacity:0}}
+    .message{position:relative;z-index:2;width:min(500px,84vw);padding:20px 22px 35px;background:linear-gradient(135deg,#292929,#181818);border-radius:17px;box-shadow:0 22px 60px rgba(0,0,0,.45)}
+    .message small{display:block;color:#a8a8a8;font-weight:700;margin-bottom:8px}.message small span{margin-left:8px;color:#747474}
+    .message p{font-size:clamp(24px,2.4vw,35px);line-height:1.18;margin:0}
+    .tag{position:absolute;left:5px;bottom:-36px;background:#fa2dc7;border-radius:16px;padding:6px 14px;font-size:12px;box-shadow:0 0 22px rgba(250,45,199,.6)}
+    .tag:before{content:"";position:absolute;left:-10px;top:-13px;border-top:18px solid #fff;border-right:14px solid transparent;transform:rotate(-30deg)}
+
+    .stuck{min-height:68vh;background:#000;display:grid;place-items:center;text-align:center;padding:80px 20px}
+    .stuck h2{max-width:1080px;font-size:clamp(46px,6.4vw,92px);line-height:.95;letter-spacing:-.065em;margin:0;opacity:0}.stuck h2 span,.stuck h2 em{display:inline-block}.stuck h2 em{font-family:"Playfair Display",Georgia,serif;font-weight:700;color:var(--aqua);padding-right:.08em}
+    .word{display:inline-block;white-space:nowrap}.char{display:inline-block;will-change:transform,opacity}
+
+    .cta{min-height:78vh;background:#fff;color:#000;display:grid;place-items:center;text-align:center;padding:100px 20px}
+    .cta h2{font-size:clamp(46px,6.3vw,88px);line-height:1.1;letter-spacing:-.065em;margin:0 0 44px}.cta h2>span{display:block}.cta em{color:#63ddd7;font-family:"Playfair Display",serif}
+    .button{display:inline-flex;padding:10px 19px;border:1px solid var(--aqua);border-radius:6px;font-weight:700;box-shadow:0 6px 18px rgba(32,217,220,.18);transition:.25s}.button:hover{background:var(--aqua);transform:translateY(-3px)}
+
+    .work{min-height:100vh;background:#fff;color:#000;padding:100px max(5vw,28px) 28px;overflow:hidden}
+    .work h2{font-size:clamp(48px,6.2vw,86px);letter-spacing:-.06em;text-align:center;margin:0 0 70px}
+    .cards{position:relative;isolation:isolate;width:min(900px,100%);margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px}.cards:before{content:"";position:absolute;z-index:-1;inset:-60px -45px;background:radial-gradient(circle at 18% 25%,rgba(32,217,220,.16),transparent 31%),radial-gradient(circle at 82% 49%,rgba(114,93,255,.11),transparent 34%),radial-gradient(circle at 32% 86%,rgba(255,91,185,.08),transparent 29%);filter:blur(24px);pointer-events:none}.cards:after{content:"";position:absolute;z-index:-1;left:8%;right:8%;bottom:2%;height:55%;border-radius:50%;background:rgba(13,24,26,.12);filter:blur(48px);transform:perspective(500px) rotateX(63deg);pointer-events:none}
+    .card{position:relative;z-index:1;background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(247,249,250,.94));border:1px solid rgba(222,226,228,.9);border-radius:12px;padding:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 18px 42px rgba(13,24,26,.10),0 45px 95px rgba(13,24,26,.07);transition:transform .35s,box-shadow .35s}
+    .card:nth-child(2){margin-top:80px}.card:nth-child(3){grid-column:1;margin-top:-15px}
+    .card:hover{transform:translateY(-11px);box-shadow:inset 0 1px 0 #fff,0 28px 55px rgba(13,24,26,.16),0 55px 110px rgba(32,217,220,.10)}
+    .project-no{position:absolute;left:0;top:-32px;color:#888;font-size:12px}.card:first-child .project-no{color:#1cbedd}
+    .card h3{font-size:16px;margin:15px 0 3px}.card p{font-size:13px;color:#777;margin:0 0 12px}.chips{display:flex;gap:8px}.chip{font-size:11px;border:1px solid #ddd;border-radius:3px;padding:3px 9px;color:#666}
+    .external{position:absolute;right:16px;bottom:16px;color:#777}.cursor-tag{position:absolute;z-index:3;padding:7px 13px;border-radius:18px;color:white;font-size:12px;box-shadow:0 0 24px currentColor}.milena{left:14%;top:8%;background:#a84de9}.you{right:30%;top:21%;background:#00c483}.joschi{left:34%;top:66%;background:#13aae9}.anonym{right:23%;top:61%;background:#5976ba}.lilia{right:9%;bottom:8%;background:#ff9500}
+    .cursor-tag:before{content:"";position:absolute;left:-11px;top:-10px;border-top:18px solid currentColor;border-right:13px solid transparent;filter:brightness(1.15);transform:rotate(-24deg)}
+    .service-card{min-height:330px;padding:28px;display:flex;flex-direction:column;overflow:hidden}.service-card:before{content:attr(data-index);position:absolute;right:18px;top:-28px;font-size:145px;font-weight:800;letter-spacing:-.12em;color:#f1f1ef;line-height:1}.service-card h3{position:relative;margin-top:125px;font-size:23px;letter-spacing:-.04em}.service-card .card-copy{position:relative;max-width:320px;min-height:58px;line-height:1.55}.service-card .price{position:relative;font-size:17px!important;font-weight:800;color:#111!important;margin:16px 0!important}.service-card .chips{margin-top:auto}.service-card:hover:before{color:#e1ffff}.service-card .external{font-size:20px;color:#1cbebe}
+
+    .portfolio{background:#050505;padding:120px max(5vw,28px);overflow:hidden}.portfolio-inner{width:min(1080px,100%);margin:auto}.portfolio-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:55px}.portfolio h2{font-size:clamp(46px,6vw,82px);letter-spacing:-.065em;line-height:1;margin:0}.portfolio-head p{max-width:330px;color:#888;font-size:13px;line-height:1.7;margin:0}.portfolio-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.work-example{position:relative;display:block;overflow:hidden;border-radius:12px;background:#111;min-height:360px}.work-example:first-child{grid-row:span 2;min-height:738px}.work-example img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}.work-example:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(0,0,0,.82));pointer-events:none}.work-example:hover img{transform:scale(1.04);filter:saturate(1.08)}.work-meta{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;align-items:end}.work-meta small{display:block;color:#bbb;margin-bottom:5px}.work-meta h3{font-size:21px;margin:0}.work-meta b{color:var(--aqua);font-size:20px}
+
+    .extras{background:#fff;color:#000;padding:120px max(5vw,28px)}.extras-inner{width:min(980px,100%);margin:auto}.extras h2{font-size:clamp(42px,5vw,68px);letter-spacing:-.06em;margin:0 0 45px}.extra-list{border-top:1px solid #cfcfcd}.extra-row{border-bottom:1px solid #cfcfcd}.extra-row summary{list-style:none;display:grid;grid-template-columns:55px 1fr auto 28px;align-items:center;gap:18px;padding:27px 0;cursor:pointer}.extra-row summary::-webkit-details-marker{display:none}.extra-row .num{color:#aaa;font-size:11px}.extra-row h3{font-size:clamp(17px,2vw,23px);letter-spacing:-.03em;margin:0}.extra-row .cost{font-size:13px;color:#159b9a;font-weight:700}.extra-row .plus{font-size:24px;font-weight:300;transition:transform .3s}.extra-row[open] .plus{transform:rotate(45deg)}.extra-row p{max-width:650px;margin:0 0 28px 73px;color:#777;font-size:13px;line-height:1.7}
+
+    .extra-row summary:focus{outline:none}.extra-row summary:focus-visible{outline:1px solid var(--aqua);outline-offset:4px}
+    .calculator{min-height:100vh;background:#050505;padding:120px max(5vw,28px);overflow:hidden}.calculator:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:52px 52px}.calc-wrap{position:relative;z-index:2;width:min(1080px,100%);margin:auto;display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:start}.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--aqua);margin:0 0 18px}.calculator h2,.contact-section h2{font-size:clamp(45px,5.6vw,78px);line-height:1;letter-spacing:-.065em;margin:0 0 24px}.lead{color:#999;line-height:1.7;max-width:610px;margin:0 0 38px}.option-group{margin:0 0 30px}.option-title{display:block;font-size:12px;color:#aaa;margin-bottom:12px}.choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choice,.addon{position:relative}.choice input,.addon input{position:absolute;opacity:0;pointer-events:none}.choice label,.addon label{display:block;border:1px solid #333;background:#101010;border-radius:7px;padding:14px 12px;cursor:pointer;transition:.25s}.choice label{min-height:88px}.choice label b,.choice label span{display:block}.choice label b{font-size:13px;margin-bottom:5px}.choice label span{font-size:11px;color:#777}.choice input:checked+label,.addon input:checked+label{border-color:var(--aqua);background:#102223;box-shadow:0 0 24px rgba(32,217,220,.09)}.addons{display:grid;grid-template-columns:1fr 1fr;gap:9px}.addon label{font-size:12px;padding-right:62px}.addon label span{position:absolute;right:12px;color:var(--aqua)}
+    .calc-total{position:sticky;top:110px;border:1px solid #2b2b2b;border-radius:14px;padding:30px;background:linear-gradient(145deg,#181818,#0d0d0d);box-shadow:0 26px 70px rgba(0,0,0,.35)}.calc-total small{display:block;color:#888;margin-bottom:8px}.total-price{font-size:clamp(46px,5vw,68px);font-weight:800;letter-spacing:-.07em}.total-note{color:#777;font-size:12px;margin:7px 0 26px}.summary{border-top:1px solid #333;padding-top:18px;margin-top:18px;min-height:82px;color:#aaa;font-size:12px;line-height:1.7}.calc-total .button{width:100%;justify-content:center;color:#fff;background:transparent;cursor:pointer}.calc-total .button:hover{color:#000}
+
+    .included{position:relative;background:#f6f6f4;color:#000;padding:120px max(5vw,28px);overflow:hidden}.included:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.028) 1px,transparent 1px);background-size:52px 52px}.included-inner{position:relative;width:min(1080px,100%);margin:auto}.included-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:72px;align-items:start}.included-copy{position:sticky;top:105px}.included h2{font-size:clamp(44px,5vw,72px);line-height:1;letter-spacing:-.065em;margin:0 0 38px}.standards{display:grid;grid-template-columns:1fr;border-top:1px solid #d0d0ce}.standard{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:23px 12px;border-bottom:1px solid #d0d0ce}.standard b{color:#18bdbf}.standard h3{font-size:15px;margin:0 0 7px}.standard p{font-size:12px;line-height:1.6;color:#777;margin:0}
+
+    .quality-visual{--orbit:145px;position:relative;min-height:350px;border:1px solid #d0d0ce;border-radius:14px;background:rgba(255,255,255,.58);overflow:hidden}.quality-visual:before,.quality-visual:after{content:"";position:absolute;left:50%;top:50%;border:1px solid #d3d3d0;border-radius:50%;transform:translate(-50%,-50%)}.quality-visual:before{width:calc(var(--orbit)*2);height:calc(var(--orbit)*2)}.quality-visual:after{width:calc(var(--orbit)*1.414);height:calc(var(--orbit)*1.414)}.quality-score{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center}.quality-score b{display:block;font-size:92px;line-height:.85;letter-spacing:-.09em}.quality-score span{display:block;color:#777;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-top:14px}.quality-pill{position:absolute;z-index:3;border:1px solid #bbb;border-radius:20px;background:#f6f6f4;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:.08em;box-shadow:0 8px 24px rgba(0,0,0,.05)}.quality-pill:nth-of-type(1){left:7%;top:16%}.quality-pill:nth-of-type(2){right:7%;top:22%}.quality-pill:nth-of-type(3){left:10%;bottom:18%}.quality-pill:nth-of-type(4){right:9%;bottom:13%}.quality-dot{position:absolute;z-index:4;left:50%;top:50%;width:8px;height:8px;margin:-4px;border-radius:50%;background:var(--aqua);box-shadow:0 0 18px var(--aqua);animation:qualityOrbit 9s linear infinite}.quality-dot.d1{animation-delay:0s}.quality-dot.d2{animation-delay:-3s}.quality-dot.d3{animation-delay:-6s}@keyframes qualityOrbit{from{transform:rotate(0deg) translateX(var(--orbit)) rotate(0deg)}to{transform:rotate(360deg) translateX(var(--orbit)) rotate(-360deg)}}
+    .contact-section{min-height:82vh;background:#000;padding:110px max(5vw,28px) 42px}.contact-wrap{width:min(1080px,100%);margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}.contact-copy .lead{margin-bottom:24px}.contact-points{display:flex;flex-wrap:wrap;gap:8px}.contact-points span{border:1px solid #333;border-radius:20px;padding:7px 12px;color:#999;font-size:10px}.telegram-link{display:flex;align-items:center;gap:12px;width:max-content;max-width:100%;margin-top:24px;padding:12px 15px;border:1px solid #285254;border-radius:9px;background:#0b1718;color:#8eacad;transition:.25s}.telegram-link span{font-size:10px;text-transform:uppercase;letter-spacing:.14em}.telegram-link b{color:var(--aqua);font-size:15px}.telegram-link i{font-style:normal;color:var(--aqua)}.telegram-link:hover{border-color:var(--aqua);transform:translateY(-2px)}.lead-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;padding:30px;border:1px solid #262626;border-radius:14px;background:linear-gradient(145deg,#111,#080808);box-shadow:0 30px 80px rgba(0,0,0,.35)}.calculation-preview{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:5px 18px;padding:17px 18px;border:1px solid #285254;border-radius:9px;background:#0d2021}.calculation-preview span{color:#779a9c;font-size:10px;text-transform:uppercase;letter-spacing:.13em}.calculation-preview b{grid-row:1/3;grid-column:2;font-size:26px;letter-spacing:-.05em;color:var(--aqua);align-self:center}.calculation-preview small{color:#fff;font-size:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:10px;color:#777}.field input,.field textarea{width:100%;border:0;border-bottom:1px solid #333;border-radius:0;background:transparent;color:#fff;padding:13px 0;font:inherit;outline:none;transition:.25s}.field textarea{min-height:78px;resize:vertical}.field input:focus,.field textarea:focus{border-color:var(--aqua)}.form-consent{grid-column:1/-1;color:#5f5f5f;font-size:9px;line-height:1.5}.submit{grid-column:1/-1;border:0;border-radius:7px;background:var(--aqua);color:#000;padding:20px 22px;font-size:18px;font-weight:800;cursor:pointer;transition:.25s;text-align:left;display:flex;align-items:center;justify-content:space-between}.submit:after{content:"→";font-size:27px;font-weight:400}.submit:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(32,217,220,.2)}.submit:disabled{cursor:wait;opacity:.62;transform:none;box-shadow:none}.form-status{grid-column:1/-1;min-height:18px;color:var(--aqua);font-size:11px}.form-status.error{color:#ff8c8c}.contact-footer{width:min(1080px,100%);margin:46px auto 0;border-top:1px solid #222;padding:18px 0 0;display:flex;justify-content:space-between;gap:18px;color:#666;font-size:11px}.contact-footer div{display:flex;gap:20px}.contact-footer a{transition:color .2s}.contact-footer a:hover{color:var(--aqua)}
+    html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}.lenis.lenis-smooth iframe{pointer-events:none}
+
+    @media(max-width:1100px){.nav{padding-inline:4vw}.nav-links{gap:38px}.calc-wrap,.included-layout{gap:46px}.contact-wrap{gap:54px}}
+    @media(max-width:820px){.calc-wrap,.included-layout,.contact-wrap{grid-template-columns:1fr;gap:48px}.calc-total,.included-copy{position:relative;top:auto}.included-copy{max-width:620px}.portfolio-grid{grid-template-columns:1fr 1fr}.work-example:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}.lead-form{grid-template-columns:1fr}.field,.field.full,.submit,.form-consent,.form-status{grid-column:1}.contact-copy{max-width:650px}}
+    @media(max-width:700px){
+      .nav{height:66px;padding:0 16px;grid-template-columns:42px 1fr auto;gap:10px}.nav-logo{width:36px;height:36px;font-size:23px}.nav-links{gap:15px;font-size:12px}.award{display:none}.top{right:16px;bottom:16px;width:44px;height:44px}
+      .hero{padding:96px 18px 72px}.hero h1{max-width:360px;font-size:clamp(38px,10.7vw,49px);line-height:.98;letter-spacing:-.058em}.hero-line{white-space:normal}.look{bottom:10%;font-size:9px}
+      .story{min-height:88svh;padding:90px 16px}.story-code{inset:4% 1%;font-size:10px}.story-code span:nth-child(2),.story-code span:nth-child(5),.story-code span:nth-child(8),.story-code span:nth-child(10),.story-code span:nth-child(13),.story-code span:nth-child(16){display:none}.message{width:100%;padding:19px 18px 31px}.message p{font-size:clamp(24px,7vw,30px)}
+      .stuck{min-height:56svh;padding:72px 16px}.stuck h2{font-size:clamp(40px,12vw,56px);line-height:1.01;padding:0}
+      .cta{min-height:64svh;padding:80px 18px}.cta h2{font-size:clamp(38px,11vw,52px);line-height:1.04;margin-bottom:34px}
+      .work{min-height:auto;padding:82px 18px 92px}.work h2{max-width:350px;font-size:clamp(38px,11vw,49px);line-height:1;letter-spacing:-.055em;margin:0 auto 56px}.cards{grid-template-columns:1fr;gap:44px}.card:nth-child(2),.card:nth-child(3){grid-column:auto;margin-top:0}.service-card{min-height:300px;padding:25px}.service-card h3{margin-top:112px;font-size:22px}.cursor-tag{display:none}
+      .extras,.portfolio,.calculator,.included,.contact-section{padding:84px 18px}.portfolio-head{display:block;margin-bottom:35px}.portfolio h2,.extras h2,.included h2,.calculator h2,.contact-section h2{font-size:clamp(36px,11vw,48px);line-height:1.02;letter-spacing:-.055em}.portfolio-head p{margin-top:18px}.portfolio-grid{grid-template-columns:1fr;gap:18px}.work-example,.work-example:first-child{grid-column:auto;grid-row:auto;min-height:0;padding:35px 12px 0;border:1px solid #292929;border-radius:13px;background:#111;box-shadow:0 22px 55px rgba(0,0,0,.35)}.work-example:before{content:"";position:absolute;z-index:3;top:15px;left:17px;width:7px;height:7px;border-radius:50%;background:var(--aqua);box-shadow:12px 0 #555,24px 0 #555}.work-example:after{display:none}.work-example img{width:100%;height:auto;object-fit:contain;border-radius:7px;border:1px solid #252525;background:#eee}.work-meta{position:relative;left:auto;right:auto;bottom:auto;min-height:78px;padding:14px 6px 17px;align-items:center}.work-meta h3{font-size:19px}
+      .extras h2{margin-bottom:34px}.extra-row summary{grid-template-columns:28px minmax(0,1fr) auto 18px;gap:8px;padding:22px 0}.extra-row h3{font-size:16px;line-height:1.25}.extra-row .cost{font-size:11px;white-space:nowrap}.extra-row .plus{font-size:21px}.extra-row p{margin:0 0 23px 36px;font-size:12px}
+      .choice-grid,.addons{grid-template-columns:1fr}.calculator .lead{margin-bottom:30px}.choice label{min-height:74px}.calc-total{padding:23px}.total-price{font-size:clamp(44px,14vw,60px)}
+      .included-layout{gap:38px}.included h2{margin-bottom:30px}.quality-visual{--orbit:112px;min-height:280px}.quality-score b{font-size:72px}.quality-score span{max-width:135px;font-size:8px;line-height:1.45}.quality-pill{padding:7px 9px;font-size:8px}.standard{grid-template-columns:34px 1fr;gap:12px;padding:20px 5px}.standard h3{font-size:14px}.standard p{font-size:11px}
+      .contact-section{padding-bottom:30px}.contact-wrap{gap:38px}.contact-copy .lead{margin-bottom:20px}.telegram-link{margin-top:20px}.lead-form{padding:22px 17px;gap:17px}.calculation-preview{grid-template-columns:1fr auto;padding:15px}.calculation-preview b{font-size:22px}.submit{min-height:58px;padding:16px 18px}.contact-footer{margin-top:32px;flex-wrap:wrap}.contact-footer div{gap:14px}
+    }
+    @media(max-width:420px){.nav{grid-template-columns:40px 1fr}.nav-line{display:none}.nav-links{justify-self:end}.hero h1{font-size:clamp(34px,10.8vw,42px)}.message p{font-size:24px}.extra-row summary{grid-template-columns:25px minmax(0,1fr) 18px}.extra-row .cost{grid-column:2;margin-top:4px}.extra-row .plus{grid-column:3;grid-row:1/3}.calculation-preview{display:block}.calculation-preview b,.calculation-preview small{display:block;margin-top:7px}.quality-pill:nth-of-type(1){left:4%;top:12%}.quality-pill:nth-of-type(2){right:4%;top:18%}.quality-pill:nth-of-type(3){left:6%;bottom:15%}.quality-pill:nth-of-type(4){right:5%;bottom:11%}}
+    @media(hover:hover){.button:hover{background:var(--aqua);transform:translateY(-3px)}.card:hover{transform:translateY(-11px);box-shadow:inset 0 1px 0 #fff,0 28px 55px rgba(13,24,26,.16),0 55px 110px rgba(32,217,220,.10)}.work-example:hover img{transform:scale(1.04);filter:saturate(1.08)}.submit:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(32,217,220,.2)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><span class="loader-mark">M.</span></div>
+  <nav class="nav" aria-label="Основная навигация">
+    <a href="#hero" class="nav-logo" aria-label="MILLIAN — наверх">M.</a><div class="nav-line"></div>
+    <div class="nav-links"><a href="#work">Услуги</a><a href="#calculator">Рассчитать</a></div>
+  </nav>
+  <a class="award" href="#contact-form"><b>M.</b><span>Веб-разработка</span></a>
+  <button class="top" type="button" aria-label="Scroll to top">↑</button>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1><span class="hero-split">сайты для бизнеса</span><span class="hero-line"><em>которые</em> <b class="hero-split">продают</b></span></h1>
+      <div class="look">Узнать больше<span class="mouse"></span></div>
+    </section>
+
+    <section class="story">
+      <div class="story-code" aria-hidden="true">
+        <span class="type-line" data-code="const approach = 'личный';">const approach = 'личный';</span><span class="type-line" data-code="conversion += trust;">conversion += trust;</span><span class="type-line" data-code="details.forEach(polish);">details.forEach(polish);</span><span class="type-line" data-code="launch({ fast: true, quality: 'high' });">launch({ fast: true, quality: 'high' });</span><span class="type-line" data-code="mobileFirst: true;">mobileFirst: true;</span><span class="type-line" data-code="if (visitor.ready) lead();">if (visitor.ready) lead();</span><span class="type-line" data-code="const offer = makeClear(message);">const offer = makeClear(message);</span><span class="type-line" data-code="page.speed = 'instant';">page.speed = 'instant';</span><span class="type-line" data-code="seo.prepare({ index: true });">seo.prepare({ index: true });</span><span class="type-line" data-code="design.remove('шаблонность');">design.remove('шаблонность');</span><span class="type-line" data-code="visitor.scrollTo('заявка');">visitor.scrollTo('заявка');</span><span class="type-line" data-code="return website.thatSells();">return website.thatSells();</span><span class="type-line" data-code="analytics.track('goal_reached');">analytics.track('goal_reached');</span><span class="type-line" data-code="layout.alignEveryPixel();">layout.alignEveryPixel();</span><span class="type-line" data-code="const cta = buildNextStep();">const cta = buildNextStep();</span><span class="type-line" data-code="brand.voice = 'confident';">brand.voice = 'confident';</span><span class="type-line" data-code="deploy({ secure: true });">deploy({ secure: true });</span><span class="type-line" data-code="client.approve('launch');">client.approve('launch');</span>
+      </div>
+      <article class="message"><small>MILLIAN <span>личный подход</span></small><p>Создаю не просто сайт, а понятный путь от первого внимания до заявки.</p><span class="tag">MILLIAN</span></article>
+    </section>
+
+    <section class="stuck"><h2><span>честно.</span><br><em>прозрачно.</em> <span>в деталях.</span></h2></section>
+
+    <section class="cta" id="contact"><div><h2><span><span class="cta-split">Ваш</span> <em>сайт</em></span><span class="cta-split">может работать сильнее.</span></h2><a class="button" href="#calculator">Рассчитать проект</a></div></section>
+
+    <section class="work" id="work">
+      <h2 class="work-title">Форматы разработки</h2>
+      <span class="cursor-tag milena">Стратегия</span><span class="cursor-tag you">Продажи</span><span class="cursor-tag joschi">Скорость</span><span class="cursor-tag anonym">Качество</span><span class="cursor-tag lilia">Детали</span>
+      <div class="cards">
+        <a class="card motion-card service-card" href="#calculator" data-package="landing" data-index="01"><span class="project-no">Формат 1</span><h3>Лендинг</h3><p class="card-copy">Одностраничный сайт с сильным оффером и структурой под заявки.</p><p class="price">от 6 000 ₽</p><div class="chips"><span class="chip">Дизайн</span><span class="chip">Разработка</span></div><span class="external">↘</span></a>
+        <a class="card motion-card service-card" href="#calculator" data-package="business" data-index="02"><span class="project-no">Формат 2</span><h3>Сайт 2–4 страницы</h3><p class="card-copy">Полноценная цифровая презентация бизнеса, эксперта или компании.</p><p class="price">от 10 000 ₽</p><div class="chips"><span class="chip">Структура</span><span class="chip">SEO-ready</span></div><span class="external">↘</span></a>
+        <a class="card motion-card service-card" href="#calculator" data-package="extended" data-index="03"><span class="project-no">Формат 3</span><h3>Расширенный сайт</h3><p class="card-copy">Сложная структура, больше разделов и функциональных блоков.</p><p class="price">от 15 000 ₽</p><div class="chips"><span class="chip">Масштаб</span><span class="chip">Функционал</span></div><span class="external">↘</span></a>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio-inner"><div class="portfolio-head"><div><p class="eyebrow">Примеры работ</p><h2>Так выглядит<br>результат.</h2></div><p>Каждый проект создавался под конкретную задачу — чтобы раскрыть ценность бизнеса и уверенно вести посетителя к действию.</p></div>
+        <div class="portfolio-grid">
+          <a class="work-example" href="https://magic-massage.ru/" target="_blank" rel="noopener noreferrer"><img src="assets/magic-massage.png" width="1425" height="891" loading="lazy" decoding="async" alt="Сайт студии релакс-массажа Magic Massage — работа MILLIAN"><span class="work-meta"><span><small>Beauty & wellness / лендинг</small><h3>Magic Massage</h3></span><b>↗</b></span></a>
+          <a class="work-example" href="https://еленабелохон.рф/" target="_blank" rel="noopener noreferrer"><img src="assets/elena-belokhon.png" width="1276" height="718" loading="lazy" decoding="async" alt="Экспертный сайт Елены Белохонь — работа MILLIAN"><span class="work-meta"><span><small>Личный бренд / экспертный сайт</small><h3>Елена Белохон</h3></span><b>↗</b></span></a>
+          <a class="work-example" href="https://shkoda-site.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="assets/shkoda.png" width="1265" height="712" loading="lazy" decoding="async" alt="Сайт детского центра развития ШКоДа — работа MILLIAN"><span class="work-meta"><span><small>Образование / корпоративный сайт</small><h3>ШКоДа</h3></span><b>↗</b></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="extras">
+      <div class="extras-inner">
+        <p class="eyebrow">Когда нужен полный запуск</p><h2>Можно добавить к проекту</h2>
+        <div class="extra-list">
+          <details class="extra-row"><summary><span class="num">01</span><h3>Подбор и подключение домена</h3><span class="cost">+1 500 ₽</span><span class="plus">+</span></summary><p>Подберу свободное имя, зарегистрирую домен, подключу его к сайту и выполню базовую настройку.</p></details>
+          <details class="extra-row"><summary><span class="num">02</span><h3>Запуск рекламы в Яндекс Директ</h3><span class="cost">+5 000 ₽</span><span class="plus">+</span></summary><p>Подготовлю параметры, настрою кампанию, выполню базовую оптимизацию и запущу рекламу.</p></details>
+          <details class="extra-row"><summary><span class="num">03</span><h3>Ускоренный запуск проекта</h3><span class="cost">+2 000 ₽</span><span class="plus">+</span></summary><p>Приоритетный график разработки, когда сайт нужен быстрее стандартного срока.</p></details>
+          <details class="extra-row"><summary><span class="num">04</span><h3>Подготовка Яндекс Вебмастера</h3><span class="cost">+1 000 ₽</span><span class="plus">+</span></summary><p>Добавлю сайт, настрою базовые параметры и подготовлю его к индексации.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="calculator" id="calculator">
+      <div class="calc-wrap">
+        <div>
+          <p class="eyebrow">Калькулятор проекта</p><h2>Соберите свой сайт</h2>
+          <p class="lead">Выберите формат и нужные опции. Расчёт сразу покажет ориентировочную стоимость — всё прозрачно, без скрытых доплат и навязанных услуг.</p>
+          <div class="option-group"><span class="option-title">01 / Формат сайта</span><div class="choice-grid">
+            <div class="choice"><input type="radio" name="siteType" id="type-landing" value="6000" data-name="Лендинг" checked><label for="type-landing"><b>Лендинг</b><span>6 000 ₽</span></label></div>
+            <div class="choice"><input type="radio" name="siteType" id="type-business" value="10000" data-name="Сайт 2–4 страницы"><label for="type-business"><b>2–4 страницы</b><span>10 000 ₽</span></label></div>
+            <div class="choice"><input type="radio" name="siteType" id="type-extended" value="15000" data-name="Расширенный сайт"><label for="type-extended"><b>Расширенный</b><span>15 000 ₽</span></label></div>
+          </div></div>
+          <div class="option-group"><span class="option-title">02 / Дополнительные задачи</span><div class="addons">
+            <div class="addon"><input type="checkbox" id="add-domain" value="1500" data-name="Домен и подключение"><label for="add-domain">Домен и подключение <span>+1 500 ₽</span></label></div>
+            <div class="addon"><input type="checkbox" id="add-direct" value="5000" data-name="Яндекс Директ"><label for="add-direct">Яндекс Директ <span>+5 000 ₽</span></label></div>
+            <div class="addon"><input type="checkbox" id="add-urgent" value="2000" data-name="Срочная разработка"><label for="add-urgent">Срочная разработка <span>+2 000 ₽</span></label></div>
+            <div class="addon"><input type="checkbox" id="add-webmaster" value="1000" data-name="Яндекс Вебмастер"><label for="add-webmaster">Яндекс Вебмастер <span>+1 000 ₽</span></label></div>
+          </div></div>
+        </div>
+        <aside class="calc-total"><small>Предварительная стоимость</small><div class="total-price">6 000 ₽</div><div class="total-note">Финальная цена фиксируется до начала работ</div><div class="summary">Лендинг<br>Ориентировочный срок: 5–7 рабочих дней</div><button class="button calc-to-contact" type="button">Обсудить этот проект</button></aside>
+      </div>
+    </section>
+
+    <section class="included" id="standards">
+      <div class="included-inner"><div class="included-layout"><div class="included-copy"><p class="eyebrow">Стандарт MILLIAN</p><h2>Включено<br>по умолчанию</h2><div class="quality-visual" id="quality" aria-hidden="true"><div class="quality-score"><b>8</b><span>стандартов включено</span></div><span class="quality-pill">DESIGN</span><span class="quality-pill">CODE</span><span class="quality-pill">SPEED</span><span class="quality-pill">SEO</span><i class="quality-dot d1"></i><i class="quality-dot d2"></i><i class="quality-dot d3"></i></div></div><div class="standards">
+          <article class="standard"><b>01</b><div><h3>Современный минимализм</h3><p>Визуальная система без шаблонного ощущения и лишнего шума.</p></div></article>
+          <article class="standard"><b>02</b><div><h3>Адаптация под все устройства</h3><p>Аккуратная работа на смартфонах, планшетах и компьютерах.</p></div></article>
+          <article class="standard"><b>03</b><div><h3>Чистый код</h3><p>Без конструкторов: быстрее, надёжнее и проще развивать дальше.</p></div></article>
+          <article class="standard"><b>04</b><div><h3>Быстрый запуск без потери качества</h3><p>Чёткий процесс экономит время, но не сокращает внимание к деталям.</p></div></article>
+          <article class="standard"><b>05</b><div><h3>SEO-подготовка</h3><p>Корректная структура, метаданные и база для продвижения.</p></div></article>
+          <article class="standard"><b>06</b><div><h3>Ориентация на продажи</h3><p>Каждый блок ведёт к следующему шагу и помогает принять решение.</p></div></article>
+          <article class="standard"><b>07</b><div><h3>Прозрачный процесс</h3><p>Понятные этапы, фиксированная стоимость и честная коммуникация.</p></div></article>
+          <article class="standard"><b>08</b><div><h3>5 дней бесплатных правок</h3><p>После сдачи можно спокойно проверить сайт в реальной работе.</p></div></article>
+        </div></div></div>
+    </section>
+
+    <section class="contact-section" id="contact-form">
+      <div class="contact-wrap"><div class="contact-copy"><p class="eyebrow">Начать проект</p><h2>Обсудим<br>ваш сайт?</h2><p class="lead">Оставьте контакт — отвечу, уточню задачу и предложу подходящий формат без длинных анкет.</p><div class="contact-points"><span>Без навязанных услуг</span><span>Цена заранее</span><span>Ответ лично</span></div><a class="telegram-link" href="https://t.me/Millian1" target="_blank" rel="noopener noreferrer" aria-label="Написать MILLIAN в Telegram"><span>Написать напрямую</span><b>@Millian1</b><i>↗</i></a></div>
+        <form class="lead-form" id="lead-form">
+          <div class="calculation-preview"><span>Расчёт из калькулятора</span><b id="form-price">6 000 ₽</b><small id="form-selection">Лендинг</small></div>
+          <div class="field"><label for="name">Ваше имя *</label><input id="name" name="name" autocomplete="name" required placeholder="Имя"></div>
+          <div class="field"><label for="contact-way">Telegram / телефон / email *</label><input id="contact-way" name="contact" required placeholder="Как с вами связаться"></div>
+          <div class="field full"><label for="message">Пара слов о задаче</label><textarea id="message" name="message" placeholder="Какой сайт нужен?"></textarea></div>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none">
+          <input type="hidden" id="site-format" name="format" value="Лендинг"><input type="hidden" id="budget" name="budget" value="6 000 ₽"><input type="hidden" id="calculation" name="calculation" value="Лендинг — 6 000 ₽">
+          <div class="form-consent">Нажимая кнопку, вы соглашаетесь на обработку указанных данных только для связи по проекту.</div><button class="submit" type="submit">Отправить заявку</button><div class="form-status" role="status"></div>
+        </form>
+      </div><footer class="contact-footer"><span>MILLIAN © 2026</span><div><a href="https://t.me/Millian1" target="_blank" rel="noopener noreferrer">Telegram @Millian1</a><a href="#hero">Наверх ↑</a></div></footer>
+    </section>
+  </main>
+
+  <script src="assets/lenis.min.js"></script>
+  <script src="assets/gsap.min.js"></script>
+  <script src="assets/ScrollTrigger.min.js"></script>
+  <script src="assets/SplitText.min.js"></script>
+  <script>
+    const loader=document.querySelector('.loader');
+    const topButton=document.querySelector('.top');
+    const tags=[...document.querySelectorAll('.cursor-tag')];
+    const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let lenis=null;
+
+    if(window.Lenis&&!reduceMotion){
+      lenis=new Lenis({duration:1.2,easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)),anchors:true,smoothWheel:true});
+      const smoothFrame=time=>{lenis.raf(time);requestAnimationFrame(smoothFrame)};
+      requestAnimationFrame(smoothFrame);
+    }
+
+    addEventListener('load',()=>setTimeout(()=>loader.classList.add('hide'),650));
+    addEventListener('scroll',()=>topButton.classList.toggle('show',scrollY>innerHeight*.5),{passive:true});
+    topButton.addEventListener('click',()=>lenis?lenis.scrollTo(0,{duration:1.2}):scrollTo({top:0,behavior:'smooth'}));
+
+    const initMotion=()=>{
+      if(!window.gsap||!window.ScrollTrigger||!window.SplitText||reduceMotion){
+        document.querySelector('.stuck h2').style.opacity=1;
+        document.querySelectorAll('.motion-card').forEach(card=>card.style.opacity=1);
+        return;
+      }
+
+      gsap.registerPlugin(ScrollTrigger,SplitText);
+      if(lenis)lenis.on('scroll',ScrollTrigger.update);
+
+      const splitOptions={type:'words,chars',wordsClass:'word',charsClass:'char'};
+      const heroSplits=[...document.querySelectorAll('.hero-split')].map(el=>new SplitText(el,splitOptions));
+      gsap.from(heroSplits.flatMap(split=>split.chars),{y:50,opacity:0,stagger:.03,duration:.6,delay:.72,ease:'back.out(1.7)'});
+      gsap.from('.hero em',{scale:.72,opacity:0,filter:'blur(8px)',duration:.8,delay:1.04,ease:'power3.out'});
+
+      gsap.fromTo('.message',{scale:.35,opacity:0,rotation:-8},{scale:1,opacity:1,rotation:0,duration:.75,ease:'back.out(1.7)',scrollTrigger:{trigger:'.story',start:'top 68%',toggleActions:'play none none reverse'}});
+      gsap.utils.toArray('.story-code span').forEach((line,index)=>gsap.fromTo(line,{opacity:.04},{opacity:.5,duration:1+index*.12,repeat:-1,yoyo:true,repeatDelay:1.8+index*.28,delay:index*.3,ease:'sine.inOut',scrollTrigger:{trigger:'.story',start:'top 78%',end:'bottom top',toggleActions:'play pause resume reset'}}));
+
+      const stuckTitle=document.querySelector('.stuck h2');
+      gsap.set(stuckTitle,{opacity:1});
+      const stuckSplit=new SplitText(stuckTitle,splitOptions);
+      gsap.from(stuckSplit.chars,{y:index=>60*Math.sin(.8*index),scale:index=>.5+.5*Math.abs(Math.sin(.8*index)),opacity:0,stagger:.03,duration:.8,ease:'elastic.out(1,0.6)',scrollTrigger:{trigger:'.stuck',start:'top 40%',toggleActions:'play none none reverse'}});
+      const ctaSplits=[...document.querySelectorAll('.cta-split')].map(el=>new SplitText(el,splitOptions));
+      gsap.from(ctaSplits.flatMap(split=>split.chars),{y:50,opacity:0,stagger:.03,duration:.6,ease:'back.out(1.7)',scrollTrigger:{trigger:'.cta',start:'top 50%',toggleActions:'restart none none reverse'}});
+      gsap.from('.cta em',{opacity:0,scale:.65,rotation:-5,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.cta',start:'top 50%',toggleActions:'restart none none reverse'}});
+      const workSplit=new SplitText('.work-title',splitOptions);
+      gsap.from(workSplit.chars,{scale:0,y:30,opacity:0,rotation:()=>gsap.utils.random(-20,20),stagger:{each:.04,from:'random'},duration:.4,ease:'back.out(2)',scrollTrigger:{trigger:'.work-title',start:'top 90%',toggleActions:'restart none none reverse'}});
+      gsap.from('.cta .button',{opacity:0,y:24,duration:.55,delay:.35,ease:'power3.out',scrollTrigger:{trigger:'.cta',start:'top 50%',toggleActions:'restart none none reverse'}});
+      gsap.utils.toArray('.motion-card').forEach(card=>gsap.fromTo(card,{opacity:0,y:64},{opacity:1,y:0,duration:.75,ease:'power3.out',scrollTrigger:{trigger:card,start:'top 88%',toggleActions:'play none none reverse'}}));
+      gsap.utils.toArray('.cursor-tag').forEach((tag,index)=>gsap.from(tag,{opacity:0,scale:0,rotation:index%2?-18:18,duration:.55,ease:'back.out(2)',scrollTrigger:{trigger:'.work',start:`top ${86-index*2}%`,toggleActions:'play none none reverse'}}));
+      gsap.utils.toArray('.work-example').forEach((example,index)=>gsap.from(example,{opacity:0,y:55,scale:.96,duration:.75,delay:index*.08,ease:'power3.out',scrollTrigger:{trigger:example,start:'top 88%',toggleActions:'play none none reverse'}}));
+      gsap.from('.extra-row',{opacity:0,y:32,stagger:.07,duration:.6,ease:'power3.out',scrollTrigger:{trigger:'.extra-list',start:'top 84%',toggleActions:'play none none reverse'}});
+      gsap.from('.calculator .choice, .calculator .addon',{opacity:0,y:28,stagger:.055,duration:.55,ease:'power3.out',scrollTrigger:{trigger:'.calculator',start:'top 62%',toggleActions:'play none none reverse'}});
+      gsap.from('.calc-total',{opacity:0,scale:.9,y:45,duration:.8,ease:'back.out(1.5)',scrollTrigger:{trigger:'.calculator',start:'top 60%',toggleActions:'play none none reverse'}});
+      gsap.from('.quality-score',{opacity:0,scale:.55,duration:.8,ease:'back.out(1.8)',scrollTrigger:{trigger:'.quality-visual',start:'top 82%',toggleActions:'play none none reverse'}});
+      gsap.from('.quality-pill',{opacity:0,scale:0,stagger:.09,duration:.5,ease:'back.out(2)',scrollTrigger:{trigger:'.quality-visual',start:'top 80%',toggleActions:'play none none reverse'}});
+      gsap.from('.standard',{opacity:0,y:35,stagger:.07,duration:.6,ease:'power3.out',scrollTrigger:{trigger:'.standards',start:'top 82%',toggleActions:'play none none reverse'}});
+      gsap.from('.lead-form .field',{opacity:0,y:30,stagger:.08,duration:.6,ease:'power3.out',scrollTrigger:{trigger:'.lead-form',start:'top 82%',toggleActions:'play none none reverse'}});
+      ScrollTrigger.refresh();
+    };
+
+    document.fonts.ready.then(initMotion);
+
+    const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+    const runTypewriter=async(line,index)=>{
+      const text=line.dataset.code||line.textContent;
+      await wait(350+index*190);
+      while(true){
+        line.textContent='';line.classList.add('typing');line.style.opacity='1';
+        for(const char of text){line.textContent+=char;await wait(24+Math.random()*34)}
+        line.classList.remove('typing');
+        await wait(1600+Math.random()*1100);
+        line.style.opacity='.12';await wait(320);line.style.opacity='';await wait(420+index*20);
+      }
+    };
+    if(!reduceMotion)document.querySelectorAll('.type-line').forEach((line,index)=>runTypewriter(line,index));
+
+    const priceNode=document.querySelector('.total-price');
+    const summaryNode=document.querySelector('.summary');
+    const budgetField=document.querySelector('#budget');
+    const formatField=document.querySelector('#site-format');
+    const calculationField=document.querySelector('#calculation');
+    const formPriceNode=document.querySelector('#form-price');
+    const formSelectionNode=document.querySelector('#form-selection');
+    let currentCalculation='';
+    const formatPrice=value=>new Intl.NumberFormat('ru-RU').format(value)+' ₽';
+    const updateCalculator=()=>{
+      const site=document.querySelector('input[name="siteType"]:checked');
+      const additions=[...document.querySelectorAll('.addon input:checked')];
+      const total=Number(site.value)+additions.reduce((sum,item)=>sum+Number(item.value),0);
+      const urgent=additions.some(item=>item.id==='add-urgent');
+      const baseDays={6000:'5–7',10000:'8–12',15000:'12–18'}[site.value];
+      const deadline=urgent?'ускоренный запуск':baseDays+' рабочих дней';
+      const names=[site.dataset.name,...additions.map(item=>item.dataset.name)];
+      priceNode.textContent=formatPrice(total);
+      summaryNode.innerHTML=names.join('<br>')+`<br><span style="color:#fff">Ориентировочный срок: ${deadline}</span>`;
+      budgetField.value=formatPrice(total);
+      formatField.value=site.dataset.name;
+      formPriceNode.textContent=formatPrice(total);
+      formSelectionNode.textContent=names.join(' + ');
+      currentCalculation=`${names.join(', ')} — ${formatPrice(total)}; срок: ${deadline}`;
+      calculationField.value=currentCalculation;
+      if(window.gsap)gsap.fromTo(priceNode,{scale:.92,opacity:.5},{scale:1,opacity:1,duration:.35,ease:'back.out(1.7)'});
+    };
+    document.querySelectorAll('.calculator input').forEach(input=>input.addEventListener('change',updateCalculator));
+    document.querySelectorAll('.card[data-package]').forEach(card=>card.addEventListener('click',()=>{
+      const map={landing:'type-landing',business:'type-business',extended:'type-extended'};
+      document.getElementById(map[card.dataset.package]).checked=true;
+      updateCalculator();
+    }));
+    document.querySelector('.calc-to-contact').addEventListener('click',()=>{
+      if(lenis)lenis.scrollTo('#contact-form',{duration:1.2});else document.querySelector('#contact-form').scrollIntoView({behavior:'smooth'});
+      setTimeout(()=>document.querySelector('#name').focus({preventScroll:true}),900);
+    });
+    updateCalculator();
+
+    const copyText=async text=>{
+      if(navigator.clipboard){await navigator.clipboard.writeText(text);return}
+      const area=document.createElement('textarea');area.value=text;area.style.position='fixed';area.style.opacity='0';document.body.append(area);area.select();document.execCommand('copy');area.remove();
+    };
+    document.querySelector('#lead-form').addEventListener('submit',async event=>{
+      event.preventDefault();
+      const form=event.currentTarget;
+      const data=new FormData(form);
+      const requestText=[
+        'Заявка на сайт MILLIAN',
+        `Имя: ${data.get('name')}`,
+        `Контакт: ${data.get('contact')}`,
+        `Формат: ${data.get('format')}`,
+        `Расчёт: ${data.get('calculation')}`,
+        `Задача: ${data.get('message')||'обсудить лично'}`
+      ].join('\n');
+      const status=form.querySelector('.form-status');
+      const submitButton=form.querySelector('.submit');
+      localStorage.setItem('millian-last-request',requestText);
+      status.classList.remove('error');
+      status.textContent='Отправляю заявку в Telegram…';
+      submitButton.disabled=true;
+      try{
+        const endpoint=location.protocol==='file:'?'http://127.0.0.1:3000/api/contact':'/api/contact';
+        const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:data.get('name'),contact:data.get('contact'),project:data.get('message')||'Обсудить лично',estimate:data.get('calculation'),format:data.get('format'),website:data.get('website')})});
+        if(!response.ok)throw new Error(`HTTP ${response.status}`);
+        status.textContent='Заявка отправлена. Я свяжусь с вами в ближайшее время.';
+        form.querySelector('#name').value='';
+        form.querySelector('#contact-way').value='';
+        form.querySelector('#message').value='';
+      }catch(error){
+        status.classList.add('error');
+        status.textContent=location.protocol==='file:'?'Запустите сайт через сервер — из локального HTML Telegram недоступен.':'Не удалось отправить заявку. Попробуйте ещё раз или напишите напрямую в Telegram.';
+        try{await copyText(requestText)}catch(copyError){}
+      }finally{
+        submitButton.disabled=false;
+      }
+    });
+
+    document.querySelector('.work').addEventListener('pointermove',event=>{
+      if(innerWidth<701)return;
+      const rect=event.currentTarget.getBoundingClientRect();
+      const x=(event.clientX-rect.left)/rect.width-.5;
+      const y=(event.clientY-rect.top)/rect.height-.5;
+      tags.forEach((tag,index)=>{
+        const depth=6+index*2;
+        if(window.gsap)gsap.to(tag,{x:x*depth,y:y*depth,duration:.5,ease:'power3.out',overwrite:'auto'});
+        else tag.style.transform=`translate(${x*depth}px,${y*depth}px)`;
+      });
+    });
+  </script>
+</body>
+</html>

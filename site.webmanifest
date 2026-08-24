@@ -1,0 +1,19 @@
+{
+  "name": "MILLIAN — разработка сайтов",
+  "short_name": "MILLIAN",
+  "description": "Современные продающие сайты для бизнеса и экспертов.",
+  "lang": "ru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
