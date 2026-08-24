@@ -1,7 +1,26 @@
 const json = (response, status, body) => response.status(status).json(body);
 
+const allowedOrigins = new Set([
+  'https://millian.website',
+  'https://www.millian.website',
+  'https://njiijnokiio-debug.github.io'
+]);
+
 module.exports = async function handler(request, response) {
+  const origin = request.headers.origin;
+  if (origin && allowedOrigins.has(origin)) {
+    response.setHeader('Access-Control-Allow-Origin', origin);
+    response.setHeader('Vary', 'Origin');
+  }
+  response.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (request.method === 'OPTIONS') {
+    if (origin && !allowedOrigins.has(origin)) return response.status(403).end();
+    return response.status(204).end();
+  }
   if (request.method !== 'POST') return json(response, 405, { error: 'Method not allowed' });
+  if (origin && !allowedOrigins.has(origin)) return json(response, 403, { error: 'Origin is not allowed' });
 
   let body;
   try {

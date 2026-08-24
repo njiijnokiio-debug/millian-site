@@ -389,7 +389,7 @@
       status.textContent='Отправляю заявку в Telegram…';
       submitButton.disabled=true;
       try{
-        const endpoint=location.protocol==='file:'?'http://127.0.0.1:3000/api/contact':'/api/contact';
+        const endpoint=location.hostname.endsWith('vercel.app')?'/api/contact':'https://millian-site.vercel.app/api/contact';
         const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:data.get('name'),contact:data.get('contact'),project:data.get('message')||'Обсудить лично',estimate:data.get('calculation'),format:data.get('format'),website:data.get('website')})});
         if(!response.ok)throw new Error(`HTTP ${response.status}`);
         status.textContent='Заявка отправлена. Я свяжусь с вами в ближайшее время.';
