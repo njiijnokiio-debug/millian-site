@@ -270,19 +270,26 @@
     addEventListener('scroll',()=>topButton.classList.toggle('show',scrollY>innerHeight*.5),{passive:true});
     topButton.addEventListener('click',()=>lenis?lenis.scrollTo(0,{duration:1.2}):scrollTo({top:0,behavior:'smooth'}));
 
+    let motionInitialized=false;
     const initMotion=()=>{
-      if(!window.gsap||!window.ScrollTrigger||!window.SplitText||reduceMotion){
+      if(motionInitialized)return;
+      motionInitialized=true;
+      if(!window.gsap||!window.ScrollTrigger){
         document.querySelector('.stuck h2').style.opacity=1;
         document.querySelectorAll('.motion-card').forEach(card=>card.style.opacity=1);
         return;
       }
 
-      gsap.registerPlugin(ScrollTrigger,SplitText);
+      gsap.registerPlugin(ScrollTrigger);
+      if(window.SplitText)gsap.registerPlugin(window.SplitText);
       if(lenis)lenis.on('scroll',ScrollTrigger.update);
 
       const splitOptions={type:'words,chars',wordsClass:'word',charsClass:'char'};
-      const heroSplits=[...document.querySelectorAll('.hero-split')].map(el=>new SplitText(el,splitOptions));
-      gsap.from(heroSplits.flatMap(split=>split.chars),{y:50,opacity:0,stagger:.03,duration:.6,delay:.72,ease:'back.out(1.7)'});
+      const splitTargets=selector=>{
+        const elements=gsap.utils.toArray(selector);
+        return window.SplitText?elements.flatMap(el=>new SplitText(el,splitOptions).chars):elements;
+      };
+      gsap.from(splitTargets('.hero-split'),{y:50,opacity:0,stagger:.03,duration:.6,delay:.72,ease:'back.out(1.7)'});
       gsap.from('.hero em',{scale:.72,opacity:0,filter:'blur(8px)',duration:.8,delay:1.04,ease:'power3.out'});
 
       gsap.fromTo('.message',{scale:.35,opacity:0,rotation:-8},{scale:1,opacity:1,rotation:0,duration:.75,ease:'back.out(1.7)',scrollTrigger:{trigger:'.story',start:'top 68%',toggleActions:'play none none reverse'}});
@@ -290,13 +297,10 @@
 
       const stuckTitle=document.querySelector('.stuck h2');
       gsap.set(stuckTitle,{opacity:1});
-      const stuckSplit=new SplitText(stuckTitle,splitOptions);
-      gsap.from(stuckSplit.chars,{y:index=>60*Math.sin(.8*index),scale:index=>.5+.5*Math.abs(Math.sin(.8*index)),opacity:0,stagger:.03,duration:.8,ease:'elastic.out(1,0.6)',scrollTrigger:{trigger:'.stuck',start:'top 40%',toggleActions:'play none none reverse'}});
-      const ctaSplits=[...document.querySelectorAll('.cta-split')].map(el=>new SplitText(el,splitOptions));
-      gsap.from(ctaSplits.flatMap(split=>split.chars),{y:50,opacity:0,stagger:.03,duration:.6,ease:'back.out(1.7)',scrollTrigger:{trigger:'.cta',start:'top 50%',toggleActions:'restart none none reverse'}});
+      gsap.from(splitTargets(stuckTitle),{y:index=>60*Math.sin(.8*index),scale:index=>.5+.5*Math.abs(Math.sin(.8*index)),opacity:0,stagger:.03,duration:.8,ease:'elastic.out(1,0.6)',scrollTrigger:{trigger:'.stuck',start:'top 40%',toggleActions:'play none none reverse'}});
+      gsap.from(splitTargets('.cta-split'),{y:50,opacity:0,stagger:.03,duration:.6,ease:'back.out(1.7)',scrollTrigger:{trigger:'.cta',start:'top 50%',toggleActions:'restart none none reverse'}});
       gsap.from('.cta em',{opacity:0,scale:.65,rotation:-5,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.cta',start:'top 50%',toggleActions:'restart none none reverse'}});
-      const workSplit=new SplitText('.work-title',splitOptions);
-      gsap.from(workSplit.chars,{scale:0,y:30,opacity:0,rotation:()=>gsap.utils.random(-20,20),stagger:{each:.04,from:'random'},duration:.4,ease:'back.out(2)',scrollTrigger:{trigger:'.work-title',start:'top 90%',toggleActions:'restart none none reverse'}});
+      gsap.from(splitTargets('.work-title'),{scale:0,y:30,opacity:0,rotation:()=>gsap.utils.random(-20,20),stagger:{each:.04,from:'random'},duration:.4,ease:'back.out(2)',scrollTrigger:{trigger:'.work-title',start:'top 90%',toggleActions:'restart none none reverse'}});
       gsap.from('.cta .button',{opacity:0,y:24,duration:.55,delay:.35,ease:'power3.out',scrollTrigger:{trigger:'.cta',start:'top 50%',toggleActions:'restart none none reverse'}});
       gsap.utils.toArray('.motion-card').forEach(card=>gsap.fromTo(card,{opacity:0,y:64},{opacity:1,y:0,duration:.75,ease:'power3.out',scrollTrigger:{trigger:card,start:'top 88%',toggleActions:'play none none reverse'}}));
       gsap.utils.toArray('.cursor-tag').forEach((tag,index)=>gsap.from(tag,{opacity:0,scale:0,rotation:index%2?-18:18,duration:.55,ease:'back.out(2)',scrollTrigger:{trigger:'.work',start:`top ${86-index*2}%`,toggleActions:'play none none reverse'}}));
@@ -311,7 +315,15 @@
       ScrollTrigger.refresh();
     };
 
-    document.fonts.ready.then(initMotion);
+    const fontsReady=document.fonts?.ready||Promise.resolve();
+    Promise.resolve(fontsReady).catch(()=>{}).then(()=>requestAnimationFrame(initMotion));
+    addEventListener('load',()=>{
+      initMotion();
+      setTimeout(()=>window.ScrollTrigger?.refresh(),120);
+    },{once:true});
+    document.querySelectorAll('img').forEach(image=>{
+      if(!image.complete)image.addEventListener('load',()=>window.ScrollTrigger?.refresh(),{once:true});
+    });
 
     const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
     const runTypewriter=async(line,index)=>{
